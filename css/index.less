@@ -1,0 +1,35 @@
+@import 'mixins/clear.less';
+// 最外层包裹的元素
+#wrapper {
+  // 头部
+  #header {
+    .headTop {
+      background: #eaeaea;
+      height: 30px;
+      .headTopMain {
+        width: 1200px;
+        margin: 0 auto;
+        line-height: 30px;
+        .clearfix();
+        // 左侧
+        .left {
+          h5 {
+            float: left;
+            margin-right: 5px;
+          }
+          p {
+            float: left;
+            a {
+              // &表示当前选择器的父级
+              &:first-child {
+                border-right: 1px solid #b3aeae;
+                margin-right: 0px;
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
